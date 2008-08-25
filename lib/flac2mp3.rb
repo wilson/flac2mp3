@@ -1,9 +1,14 @@
-$:.unshift File.dirname(__FILE__)
-require 'flacinfo'
-require 'mp3info'
+begin
+  require 'flacinfo'
+  require 'mp3info'
+rescue LoadError
+  $stderr.puts "flac2mp3 requires the `flacinfo-rb` and `ruby-mp3info` gems"
+  exit 1
+end
 require 'yaml'
 
 class Flac2mp3
+
   def initialize(options = {})
     @config = {}
     load_config
