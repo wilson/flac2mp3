@@ -3,7 +3,7 @@
 require 'rubygems'
 require 'hoe'
 
-Hoe.new('flac2mp3', '0.3.0') do |p|
+Hoe.new('flac2mp3', '0.3.1') do |p|
   p.developer('Yossef Mendelssohn', 'ymendel@pobox.com')
   p.rubyforge_name = 'yomendel'
   p.extra_deps = [

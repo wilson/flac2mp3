@@ -1,13 +1,11 @@
-begin
-  require 'flacinfo'
-  require 'mp3info'
-rescue LoadError
-  $stderr.puts "flac2mp3 requires the `flacinfo-rb` and `ruby-mp3info` gems"
-  exit 1
-end
+gem 'flacinfo-rb', '>= 0.4'
+require 'flacinfo'
+gem 'ruby-mp3info', '>= 0.5.1'
+require 'mp3info'
 require 'yaml'
 
 class Flac2mp3
+  VERSION = "0.3.1"
 
   def initialize(options = {})
     @config = {}
