@@ -16,7 +16,7 @@ Options are:
 BANNER
   opts.separator ''
   opts.on('-v', '--version',
-          "Show the flac2mp version number and exit") { puts "flac2mp3 #{Flac2mp3::VERSION}"; exit }
+          "Show the flac2mp3 version number and exit") { puts "flac2mp3 #{Flac2mp3::VERSION}"; exit }
   opts.on('-d', '--[no-]delete',
           "Delete the original file after conversion") { |delete|  OPTIONS[:delete] = delete }
   opts.on('-s', '--silent',
